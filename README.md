@@ -1,6 +1,6 @@
 # Order Analyzer
 
-[![Architecture diagram](https://gitdiagram.com/diagram-badge.svg)](https://gitdiagram.com/tarun-suthar-04/order-analyzer?utm_source=readme&utm_medium=badge)
+[![Architecture diagram](https://gitdiagram.com/diagram-badge.svg)](https://gitdiagram.com/tarun-suthar-04/order-manager?utm_source=readme&utm_medium=badge)
 
 Order Analyzer is an Android app that helps a small shop organize retailer orders and figure out what products to prepare or deliver each day.
 
@@ -8,7 +8,7 @@ Instead of adding up every retailer's order by hand, enter the quantities in the
 
 The app also has a separate tool for analyzing Amul order spreadsheets. Choose an Excel or CSV file to see order totals by vehicle and retailer.
 
-[![Architecture diagram of tarun-suthar-04/order-analyzer](https://gitdiagram.com/tarun-suthar-04/order-analyzer/diagram.png)](https://gitdiagram.com/tarun-suthar-04/order-analyzer?utm_source=readme&utm_medium=picture)
+[![Architecture diagram of tarun-suthar-04/order-manager](https://gitdiagram.com/tarun-suthar-04/order-manager/diagram.png)](https://gitdiagram.com/tarun-suthar-04/order-manager?utm_source=readme&utm_medium=picture)
 
 ## At a glance
 
