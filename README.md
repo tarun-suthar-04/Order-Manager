@@ -1,26 +1,58 @@
-# Order Analyzer
+# Order Manager
 
 [![Architecture diagram](https://gitdiagram.com/diagram-badge.svg)](https://gitdiagram.com/tarun-suthar-04/order-manager?utm_source=readme&utm_medium=badge)
 
-Order Analyzer is an Android app that helps a small shop organize retailer orders and figure out what products to prepare or deliver each day.
+**A simple way to take shop orders, total what you need, and keep your day organized.**
 
-Instead of adding up every retailer's order by hand, enter the quantities in the app and it totals the demand by product. For example, it can show how many bread loaves or milk packets are needed across all retailers. You can also review the bill in the app, but the copy/share production list contains quantities only.
+Order Manager (repository name: **Order Analyzer**) is an Android app for small shops, bakeries, and dairy businesses. Record each retailer's daily order once; the app adds up quantities across retailers so you can plan preparation and delivery without manual tallying.
 
-The app also has a separate tool for analyzing Amul order spreadsheets. Choose an Excel or CSV file to see order totals by vehicle and retailer.
+It also includes a separate **Amul Milk Orders** tool for analyzing existing Excel or CSV order files. Upload a sheet to review totals by vehicle and retailer, then export a summary report.
 
-[![Architecture diagram of tarun-suthar-04/order-manager](https://gitdiagram.com/tarun-suthar-04/order-manager/diagram.png)](https://gitdiagram.com/tarun-suthar-04/order-manager?utm_source=readme&utm_medium=picture)
+<p align="center">
+  <img src="docs/images/home-and-amul-showcase.png" alt="Order Manager home screen and Amul spreadsheet upload screen" width="900" />
+</p>
 
-## At a glance
+## See how it works
 
-| If you need to… | Use… |
+The animation below summarizes both workflows. Daily shop orders are saved on the device and can sync through Firebase; Amul spreadsheet analysis is a separate local workflow.
+
+<p align="center">
+  <img src="docs/images/order-flow.svg" alt="Animated flow: set up shop, enter retailer orders, review totals, share a dispatch list; separately upload and export an Amul report" width="900" />
+</p>
+
+## App screens
+
+| Take orders and review totals | Dashboard and Amul analysis |
+|:---:|:---:|
+| <img src="docs/images/order-entry-and-totals-showcase.png" alt="Retailer order entry and product totals" width="440" /> | <img src="docs/images/amul-and-dashboard-showcase.png" alt="Daily orders dashboard and Amul analysis" width="440" /> |
+
+| Track history and manage products | Manage retailers and shop profile |
+|:---:|:---:|
+| <img src="docs/images/history-and-products-showcase.png" alt="Order history and product management" width="440" /> | <img src="docs/images/retailers-and-profile-showcase.png" alt="Retailer management and shop sync profile" width="440" /> |
+
+## What the app helps you do
+
+| Daily Product Orders | Amul Milk Orders |
 |---|---|
-| Record orders from your retailers and total product quantities | **Daily Product Orders** |
-| Review bills, order history, and pending retailers | **Daily Product Orders** |
-| Analyze an existing Amul Excel or CSV order file | **Amul Milk Orders** |
+| Add and manage products and retailers | Upload `.xlsx`, `.xls`, or `.csv` order sheets |
+| Record and update each retailer's order for the day | View totals grouped by vehicle and retailer |
+| Review product quantities, bills, pending retailers, and recent history | Search and sort results, then export a CSV report |
+| Copy/share a dispatch list containing product names and quantities (no prices) | Keep spreadsheet analysis separate from shop orders |
 
-Daily Product Orders are stored on the phone and can sync between phones signed into the same shop account. The app supports offline use; queued cloud changes can sync after the phone reconnects. Only today's and yesterday's orders are kept. Older orders are removed automatically, while products and retailers remain. Amul spreadsheet analysis is separate from shop-account sync.
+### Good to know
 
-> This repository contains the Android app source code. To use shop login and cloud sync, configure your own Firebase project as described below. Firebase credentials and the local spreadsheet—which may contain retailer/order data—are not included in the repository.
+- Daily orders are available offline. Signed-in shop data can synchronize between devices through Firebase when a connection is available.
+- Only **today's and yesterday's** daily orders are retained. Older orders are cleaned up automatically; product and retailer records are not.
+- Prices and bill calculations remain available in the app. Only the copied/shared dispatch text leaves prices and amounts out.
+- Amul spreadsheets are analyzed separately and are not uploaded to the shop's Firestore data.
+
+> This repository contains the Android source code. Firebase configuration and local customer/order data are intentionally not included. Screenshots are visual examples; displayed data may be illustrative.
+
+## Project architecture
+
+Want a code-level view? Open the generated architecture diagram:
+
+[![Architecture diagram of Order Manager](https://gitdiagram.com/tarun-suthar-04/order-manager/diagram.png)](https://gitdiagram.com/tarun-suthar-04/order-manager?utm_source=readme&utm_medium=picture)
 
 ## Quick start
 
