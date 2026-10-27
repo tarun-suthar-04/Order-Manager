@@ -4,7 +4,7 @@
 
 **A simple way to take shop orders, total what you need, and keep your day organized.**
 
-Order Manager (repository name: **Order Analyzer**) is an Android app for small shops, bakeries, and dairy businesses. Record each retailer's daily order once; the app adds up quantities across retailers so you can plan preparation and delivery without manual tallying.
+Order Manager is an Android app for small shops, bakeries, and dairy businesses. Record each retailer's daily order once; the app adds up quantities across retailers so you can plan preparation and delivery without manual tallying.
 
 It also includes a separate **Amul Milk Orders** tool for analyzing existing Excel or CSV order files. Upload a sheet to review totals by vehicle and retailer, then export a summary report.
 
